@@ -1,0 +1,4 @@
+SELECT distinct A.Num AS 'ConsecutiveNums'
+FROM Logs A
+JOIN Logs B ON A.Id = B.Id+1 AND A.Num=B.Num
+JOIN Logs C ON A.Id = C.Id+2 AND A.Num=C.Num
